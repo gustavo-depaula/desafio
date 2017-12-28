@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O Jogo</title>
+
+  <!-- style -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+  <link rel="stylesheet" href="main.css">
+
+  <!-- dependecies js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.7.2/redux.min.js"></script>
+  <script src="https://wzrd.in/standalone/deep-freeze@latest"></script>
+  <script src="https://unpkg.com/expect@%3C21/umd/expect.min.js"></script>
+
+  <script type="text/javascript" src="js/reducer.js"></script>
+  <script type="text/javascript" src="js/reducer.test.js"></script>
+  <script type="text/javascript" src="js/store.js"></script>
+
+</head>
+<body>
+  <div class="columns">
+    <div class="column name upsidedown">
+      <a class="button" disabled>
+        Jogador 1
+      </a>
+    </div>
+    <div class="column attack upsidedown">
+      <a id="attackPlayerTwo" class="button is-danger">
+        ATACAR!
+      </a>
+    </div>
+    <div class="column health upsidedown">
+      <a class="button is-primary health-button">
+        <span id="playerOneHealth"></span>%
+      </a>
+    </div>
+    <div id="reset" class="column">
+      <a id="resetGameBtn" class="button is-link is-outlined">
+        Reiniciar |&nbsp;<span class="upsidedown">Reiniciar</span>
+      </a>
+    </div>
+    <div class="column health">
+      <a class="button is-primary health-button">
+        <span id="playerTwoHealth"></span>%
+      </a>
+    </div>
+    <div class="column attack">
+      <a id="attackPlayerOne" class="button is-danger">
+        ATACAR!
+      </a>
+    </div>
+    <div class="column name">
+      <a class="button" disabled>
+        Jogador 2
+      </a>
+    </div>
+  </div>
+  <div id="modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p id="winnerCongratulations" class="modal-card-title">Parabéns Jogador 1! Você ganhou!</p>
+      </header>
+
+      <footer class="modal-card-foot">
+        <button id="playAgainBtn" class="button is-info">Jogar de novo!</button>
+        <button id="closeModal" class="button">Voltar</button>
+      </footer>
+    </div>
+  </div>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
