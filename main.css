@@ -12,32 +12,55 @@
   width: 100%;
 }
 
+.attack a {
+  font-size: 2rem !important;
+  font-weight: bold;
+  font-family: 'Sorts Mill Goudy', serif;
+}
 
+.health a {
+  font-size: 2rem !important;
+  font-family: 'Sorts Mill Goudy', serif;
+}
 
 .health-button {
   cursor: default;
 }
 
-@media (orientation: landscape) {
-  .player {
-    height: 100vh;
+@media (orientation: landscape), (min-width: 482px) {
+
+  a {
+    position: absolute;
   }
 
   .name {
-    top: 0;
-    height: 5vh;
+    order: 1;
+    min-height: 10%;
+    max-height: 10%;
+    position: relative;
   }
 
   .attack {
-    height: 25vh;
+    order: 3;
+    min-height: 60%;
+    position: relative;
   }
 
   .health {
-    height: 15vh;
+    order: 2;
+    min-height: 30%;
+    position: relative;
   }
 
   #reset {
     height: 10vh;
+    max-width: 20%;
+  }
+
+  .player {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
   }
 }
 
@@ -66,5 +89,10 @@
 
   #reset {
     height: 10vh;
+    min-width: 100vw;
+  }
+
+  .columns {
+    max-height: 100vh;
   }
 }
