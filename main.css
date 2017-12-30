@@ -12,32 +12,59 @@
   width: 100%;
 }
 
-.name {
-  height: 5vh;
-}
 
-.attack {
-  height: 25vh;
-}
-
-.health {
-  height: 15vh;
-}
-
-#reset {
-  height: 10vh;
-}
-
-/* one side of the phone needs to be upside down, so both players can read clearly */
-.upsidedown {
-  -webkit-transform:rotate(-180deg);
-  -moz-transform:rotate(-180deg);
-  -o-transform:rotate(-180deg);
-  transform:rotate(-180deg);
-  ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-  filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-}
 
 .health-button {
   cursor: default;
+}
+
+@media (orientation: landscape) {
+  .player {
+    height: 100vh;
+  }
+
+  .name {
+    top: 0;
+    height: 5vh;
+  }
+
+  .attack {
+    height: 25vh;
+  }
+
+  .health {
+    height: 15vh;
+  }
+
+  #reset {
+    height: 10vh;
+  }
+}
+
+@media (orientation: portrait) {
+  /* one side of the phone needs to be upside down, so both players can read clearly */
+  .upsidedown {
+    -webkit-transform:rotate(-180deg);
+    -moz-transform:rotate(-180deg);
+    -o-transform:rotate(-180deg);
+    transform:rotate(-180deg);
+    ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  }
+
+  .name {
+    height: 5vh;
+  }
+
+  .attack {
+    height: 25vh;
+  }
+
+  .health {
+    height: 15vh;
+  }
+
+  #reset {
+    height: 10vh;
+  }
 }
