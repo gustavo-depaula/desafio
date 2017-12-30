@@ -12,13 +12,13 @@
   width: 100%;
 }
 
-.attack a {
+.attack button {
   font-size: 2rem !important;
   font-weight: bold;
   font-family: 'Sorts Mill Goudy', serif;
 }
 
-.health a {
+.health button {
   font-size: 2rem !important;
   font-family: 'Sorts Mill Goudy', serif;
 }
@@ -28,11 +28,6 @@
 }
 
 @media (orientation: landscape), (min-width: 482px) {
-
-  a {
-    position: absolute;
-  }
-
   .name {
     order: 1;
     min-height: 10%;
